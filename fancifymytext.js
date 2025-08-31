@@ -18,7 +18,7 @@ function moo() {
 
   for (let i = 0; i < parts.length; i++) {
     let trimmedPart = parts[i].trim();
-    
+
     // Add '-Moo' if there's at least one letter
     if (/[A-Z]/.test(trimmedPart)) {
       parts[i] = trimmedPart + "-Moo"; 
@@ -28,5 +28,4 @@ function moo() {
   }
   
   text.value = parts.join(".");
-
 }
