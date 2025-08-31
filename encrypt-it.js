@@ -19,6 +19,9 @@
     // for UI elements on the page.
     let encryptButton = document.getElementById("encrypt-it");
     encryptButton.addEventListener("click", handleClick);
+
+    let resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", handleReset);
   }
 
   // Add any other functions in this area (you should not implement your
@@ -27,6 +30,11 @@
 
   function handleClick() {
     console.log("Clicked!");
+  }
+
+  function handleReset() {
+    let textField = document.getElementById("input-text");
+    textField.value = "";
   }
 
 })();
