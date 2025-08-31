@@ -1,3 +1,3 @@
-function showAlert() {
-  alert("Hello, world!");
+function changeFont() {
+  document.getElementById("textArea").style.fontSize = "2em";
 }
