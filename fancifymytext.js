@@ -3,9 +3,10 @@ function changeFont() {
 }
 
 function changeWeight() {
+  
   if (document.getElementById("fancyButton").checked) {
-    document.getElementById("textArea").style.fontWeight = "bold";
+    document.getElementById("textArea").className = "fancy";
   } if (document.getElementById("boringButton").checked) {
-    document.getElementById("textArea").style.fontWeight = "normal";
+    document.getElementById("textArea").className = "boring";
   }
 }
