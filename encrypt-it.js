@@ -29,7 +29,9 @@
   // you shouldn't write an entire Java program in the main method).
 
   function handleClick() {
-    console.log("Clicked!");
+    let text = document.getElementById("input-text").value;
+    let finalMSG = encryptMessage(text);
+    console.log(finalMSG);
   }
 
   function handleReset() {
@@ -37,5 +39,40 @@
     textField.value = "";
   }
 
+  /**
+   * Encrypts the given message by shifting each letter by one in the alphabet.
+   * Wraps around 'z' to 'a'. Non-letter characters are not changed.
+   * @param {string} message - The message to be encrypted.
+   * @returns {string} - The encrypted message.
+   */
+  function encryptMessage(message) {
+    let zValue = "z".charCodeAt(0);
+    let aValue = "a".charCodeAt(0);
+    
+    message = message.toLowerCase();
+
+    let asciiArray = [];
+
+    for (let i = 0; i < message.length; i++) {
+      if (message.charCodeAt(i) >= aValue && message.charCodeAt(i) <= zValue) {
+        let cypherChar = message.charCodeAt(i) + 1;
+
+        // Wrap back to 'a' if we go past 'z'
+        if (cypherChar > zValue) {
+          cypherChar = aValue;
+        }
+
+        // Convert Ascii value to char and push to array
+        asciiArray.push(String.fromCharCode(cypherChar));
+      } else {
+        asciiArray.push(message.charAt(i));
+      } // Non-letter characters are pushed unchanged
+      
+    }
+
+    return asciiArray.join("");
+  }
+
+  
 })();
 
