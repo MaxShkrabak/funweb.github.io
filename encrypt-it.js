@@ -31,7 +31,9 @@
   function handleClick() {
     let text = document.getElementById("input-text").value;
     let finalMSG = encryptMessage(text);
-    console.log(finalMSG);
+    
+    let outputText = document.getElementById("result");
+    outputText.textContent = finalMSG;
   }
 
   function handleReset() {
