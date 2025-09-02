@@ -12,21 +12,16 @@
   window.addEventListener("load", init);
 
   /**
-   * TODO: Write a function comment using JSDoc.
+   * Initializes the program, setting up event listeners for the buttons.
+   * This function is called when the "load" event fires on the window.
    */
   function init() {
-    // Note: In this function, we usually want to set up our event handlers
-    // for UI elements on the page.
     let encryptButton = document.getElementById("encrypt-it");
     encryptButton.addEventListener("click", handleClick);
 
     let resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", handleReset);
   }
-
-  // Add any other functions in this area (you should not implement your
-  // entire program in the init function, for similar reasons that
-  // you shouldn't write an entire Java program in the main method).
 
   function handleClick() {
     let text = document.getElementById("input-text").value;
@@ -41,7 +36,10 @@
     textField.value = "";
   }
 
-  /**
+  
+})();
+
+/**
    * Encrypts the given message by shifting each letter by one in the alphabet.
    * Wraps around 'z' to 'a'. Non-letter characters are not changed.
    * @param {string} message - The message to be encrypted.
@@ -74,7 +72,3 @@
 
     return asciiArray.join("");
   }
-
-  
-})();
-
