@@ -34,6 +34,9 @@
   function handleReset() {
     let textField = document.getElementById("input-text");
     textField.value = "";
+
+    let outputText = document.getElementById("result");
+    outputText.textContent = "";
   }
 })();
 
