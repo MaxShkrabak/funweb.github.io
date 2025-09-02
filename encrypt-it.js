@@ -17,13 +17,13 @@
    */
   function init() {
     let encryptButton = document.getElementById("encrypt-it");
-    encryptButton.addEventListener("click", handleClick);
+    encryptButton.addEventListener("click", handleEncryption);
 
     let resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", handleReset);
   }
 
-  function handleClick() {
+  function handleEncryption() {
     let text = document.getElementById("input-text").value;
     let encryptedMsg = encryptMessage(text);
     
@@ -35,8 +35,6 @@
     let textField = document.getElementById("input-text");
     textField.value = "";
   }
-
-  
 })();
 
 /**
