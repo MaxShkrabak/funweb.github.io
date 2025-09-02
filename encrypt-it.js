@@ -30,10 +30,10 @@
 
   function handleClick() {
     let text = document.getElementById("input-text").value;
-    let finalMSG = encryptMessage(text);
+    let encryptedMsg = encryptMessage(text);
     
     let outputText = document.getElementById("result");
-    outputText.textContent = finalMSG;
+    outputText.textContent = encryptedMsg;
   }
 
   function handleReset() {
