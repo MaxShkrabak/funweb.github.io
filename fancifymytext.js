@@ -1,5 +1,5 @@
 function changeFont() {
-  document.getElementById("textArea").style.fontSize = "3em";
+  document.getElementById("textArea").style.fontSize = "2em";
 }
 
 function changeWeight() {
